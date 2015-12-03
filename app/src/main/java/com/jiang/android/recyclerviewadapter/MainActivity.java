@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jiang.android.recyclerviewadapter.adapter.BaseAdapter;
-import com.jiang.android.recyclerviewadapter.adapter.BaseHeadFootAdapter;
+import com.jiang.android.library.main.adapter.BaseAdapter;
+import com.jiang.android.library.main.adapter.BaseHeadFootAdapter;
+import com.jiang.android.library.main.holder.BaseViewHolder;
+import com.jiang.android.library.main.inter.OnItemClickListener;
 import com.jiang.android.recyclerviewadapter.adapter.MyAdapter;
 import com.jiang.android.recyclerviewadapter.adapter.MyAdapter3;
-import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
-import com.jiang.android.recyclerviewadapter.inter.OnItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,15 +37,15 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         initData();
 
-      //  setBaseAdapter();
-      //  setHeadFootItem();
+        //  setBaseAdapter();
+        //  setHeadFootItem();
 
 
-      //  setItem();
+        //  setItem();
 
         setHeadNotFooter();
 
-     //   setHeaderFooterAdapter();
+        //   setHeaderFooterAdapter();
 
 
     }
@@ -100,9 +100,11 @@ public class MainActivity extends AppCompatActivity {
          */
         MyAdapter adapter1 = new MyAdapter(mLists, this);
         adapter1.setonItemClick(new OnItemClickListener() {
+
             @Override
             public void onItemClick(int position) {
                 showToast(position + "");
+
             }
         });
         mRecyclerView.setAdapter(adapter1);

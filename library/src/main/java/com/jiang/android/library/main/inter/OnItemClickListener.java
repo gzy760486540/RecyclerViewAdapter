@@ -25,7 +25,7 @@
  * #               佛祖保佑         永无BUG              #
  * #                                                   #
  */
-package com.jiang.android.recyclerviewadapter.inter;
+package com.jiang.android.library.main.inter;
 
 /**
  * Created by jiang on 12/3/15.

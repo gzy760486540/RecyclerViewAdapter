@@ -26,7 +26,7 @@
  * #                                                   #
  */
 
-package com.jiang.android.recyclerviewadapter.holder;
+package com.jiang.android.library.main.holder;
 
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;

@@ -35,8 +35,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.jiang.android.library.main.inter.OnItemClickListener;
 import com.jiang.android.recyclerviewadapter.R;
-import com.jiang.android.recyclerviewadapter.inter.OnItemClickListener;
 
 import java.util.List;
 

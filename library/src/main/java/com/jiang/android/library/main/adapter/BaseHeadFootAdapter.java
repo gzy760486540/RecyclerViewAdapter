@@ -26,7 +26,7 @@
  * #                                                   #
  */
 
-package com.jiang.android.recyclerviewadapter.adapter;
+package com.jiang.android.library.main.adapter;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
@@ -34,7 +34,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
+import com.jiang.android.library.main.holder.BaseViewHolder;
 
 import java.util.List;
 

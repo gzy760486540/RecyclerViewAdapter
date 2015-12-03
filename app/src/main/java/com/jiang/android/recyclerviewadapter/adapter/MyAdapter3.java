@@ -34,8 +34,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jiang.android.library.main.adapter.BaseHeadFootAdapter;
+import com.jiang.android.library.main.holder.BaseViewHolder;
 import com.jiang.android.recyclerviewadapter.R;
-import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
 
 import java.util.List;
 
