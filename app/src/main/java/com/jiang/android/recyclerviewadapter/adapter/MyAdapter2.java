@@ -29,7 +29,6 @@
 package com.jiang.android.recyclerviewadapter.adapter;
 
 import android.content.Context;
-import android.view.View;
 import android.widget.TextView;
 
 import com.jiang.android.recyclerviewadapter.BaseViewHolder;
@@ -57,15 +56,6 @@ public class MyAdapter2 extends BaseAdapter<Character> {
     public void onBindView(BaseViewHolder holder, final int position) {
         TextView title = holder.getView(R.id.item_tv);
         title.setText(mLists.get(position) + "");
-        if (mCallBack != null) {
-            holder.getmConvertView().setClickable(true);
-            holder.getmConvertView().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mCallBack.onClick(v, position);
 
-                }
-            });
-        }
     }
 }
