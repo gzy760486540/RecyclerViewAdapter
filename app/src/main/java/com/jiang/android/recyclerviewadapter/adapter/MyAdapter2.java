@@ -31,7 +31,7 @@ package com.jiang.android.recyclerviewadapter.adapter;
 import android.content.Context;
 import android.widget.TextView;
 
-import com.jiang.android.recyclerviewadapter.BaseViewHolder;
+import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
 import com.jiang.android.recyclerviewadapter.R;
 
 import java.util.List;

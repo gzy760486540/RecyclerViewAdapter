@@ -34,7 +34,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jiang.android.recyclerviewadapter.BaseViewHolder;
+import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
 import com.jiang.android.recyclerviewadapter.inter.OnItemClickListener;
 
 import java.util.List;
