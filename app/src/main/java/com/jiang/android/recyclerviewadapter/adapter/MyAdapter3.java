@@ -29,33 +29,62 @@
 package com.jiang.android.recyclerviewadapter.adapter;
 
 import android.content.Context;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
 import com.jiang.android.recyclerviewadapter.R;
+import com.jiang.android.recyclerviewadapter.holder.BaseViewHolder;
 
 import java.util.List;
 
 /**
  * Created by jiang on 12/3/15.
  */
-public class MyAdapter2 extends BaseAdapter<Character> {
+public class MyAdapter3 extends BaseHeadFootAdapter<Character> {
 
-    private MyAdapter.CallBack mCallBack;
 
-    public MyAdapter2(List<Character> mLists, Context mContext, int layoutID, MyAdapter.CallBack callBack) {
+    private static final String TAG = "MyAdapter3";
+
+
+    public MyAdapter3(List<Character> mLists, Context mContext, int layoutID) {
         super(mLists, mContext, layoutID);
-        this.mCallBack = callBack;
     }
 
-    public MyAdapter2(List<Character> mLists, Context mContext, int layoutID) {
-        super(mLists, mContext, layoutID);
+    @Override
+    protected void onBindHeaderView(BaseViewHolder holder, final int position) {
+        holder.getView(R.id.item_header).setClickable(true);
+        holder.getView(R.id.item_header).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "你点击了" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    protected void onBindFooterView(BaseViewHolder holder, final int position) {
+        holder.getView(R.id.item_header).setClickable(true);
+        holder.getView(R.id.item_header).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "你点击了" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
     public void onBindView(BaseViewHolder holder, final int position) {
         TextView title = holder.getView(R.id.item_tv);
         title.setText(mLists.get(position) + "");
-
+        holder.getmConvertView().setClickable(true);
+        holder.getmConvertView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "你点击了(相对于ItemList而不是相对于整个List)" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+        Log.i(TAG, mLists.get(position) + "; p" + position);
     }
 }

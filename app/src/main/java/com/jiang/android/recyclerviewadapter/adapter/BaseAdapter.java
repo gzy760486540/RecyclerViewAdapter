@@ -40,6 +40,7 @@ import com.jiang.android.recyclerviewadapter.inter.OnItemClickListener;
 import java.util.List;
 
 /**
+ * 基础的adapter
  * Created by jiang on 12/3/15.
  */
 public abstract class BaseAdapter<M> extends RecyclerView.Adapter<BaseViewHolder> {
@@ -59,6 +60,10 @@ public abstract class BaseAdapter<M> extends RecyclerView.Adapter<BaseViewHolder
         this.mLists = mLists;
         this.mContext = mContext;
         this.layoutID = layoutID;
+    }
+
+    public List<M> getmLists() {
+        return mLists;
     }
 
     @Override

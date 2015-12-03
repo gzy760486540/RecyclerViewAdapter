@@ -36,6 +36,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jiang.android.recyclerviewadapter.R;
+import com.jiang.android.recyclerviewadapter.inter.OnItemClickListener;
 
 import java.util.List;
 
@@ -47,13 +48,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<Character> mLists;
 
     private Context mContext;
-    private CallBack mClick;
+    private OnItemClickListener mClick;
 
-    public CallBack getmClick() {
-        return mClick;
-    }
 
-    public void setmClick(CallBack mClick) {
+    public void setonItemClick(OnItemClickListener mClick) {
         this.mClick = mClick;
     }
 
@@ -76,7 +74,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             holder.mRoot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mClick.onClick(v, position);
+                    mClick.onItemClick(position);
                 }
             });
         }
@@ -102,7 +100,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-    interface CallBack {
-        void onClick(View v, int pos);
-    }
+
 }
